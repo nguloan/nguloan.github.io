@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #777777;
+    padding: 30px;
+}
+
+img:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+header {
+    background-image: linear-gradient(to right bottom, rgba(142, 158, 252, .4), rgba(28, 62, 255, .8)), url('hinh-chu-de.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    height: 95vh;
+    -webkit-clip-path: ellipse(80% 47% at 52% 35%);
+    clip-path: ellipse(80% 47% at 52% 35%);
+    .logo-box {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        .logo {
+            height: 90px;
+        }
+    }
+    .text_box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        .heading-primary {
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            .heading-primary_main {
+                display: block;
+                font-size: 62px;
+                font-weight: 400;
+                letter-spacing: 15px;
+                animation: moveInLeft 1s ease-out;
+            }
+            .heading-primary_sub {
+                display: block;
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 18px;
+                animation: moveInRight 1s ease-out;
+            }
+        }
+        .btn,
+        .btn:link,
+        .btn:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 100px;
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 16px;
+            position: relative;
+            transition: all .2s;
+            animation: moveInUpper 1s ease-out .5s;
+            animation-fill-mode: backwards;
+        }
+        .btn::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            border-radius: 100px;
+            transition: all .4s;
+        }
+        .btn-white {
+            color: #777777;
+            background-color: #fff
+        }
+        .btn-white::after {
+            background-color: #fff;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+        }
+        .btn:hover::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+        .btn:active {
+            transform: translateY(-1px);
+            box-shadow: rgba(0, 0, 0, .2);
+            outline: none;
+        }
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes moveInUpper {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
