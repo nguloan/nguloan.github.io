@@ -20,8 +20,8 @@ img:hover {
 }
 
 header {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(142, 158, 252, 0.4)), to(rgba(28, 62, 255, 0.8))), url("hinh-chu-de.jpg");
-  background-image: linear-gradient(to right bottom, rgba(142, 158, 252, 0.4), rgba(28, 62, 255, 0.8)), url("hinh-chu-de.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(142, 158, 252, 0.4)), to(rgba(28, 62, 255, 0.8))), url("/img/hinh-chu-de.jpg");
+  background-image: linear-gradient(to right bottom, rgba(142, 158, 252, 0.4), rgba(28, 62, 255, 0.8)), url("/img/hinh-chu-de.jpg");
   background-size: cover;
   background-position: top;
   position: relative;
